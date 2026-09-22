@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RISET — Una pregunta al día para no vivir en piloto automático</title>
+<meta name="description" content="RISET es una app de preguntas diarias para romper el piloto automático. Ciclos temáticos, una pregunta al día y Pulsos opcionales para pasar a la acción.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: #FAF5EA;
+    color: #1C1B18;
+  }
+  a { color: inherit; text-decoration: none; }
+  a.navlink { opacity: 0.7; transition: opacity 0.2s ease; }
+  a.navlink:hover { opacity: 1; text-decoration: underline; }
+
+  @keyframes bob {
+    0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+    50% { transform: translateY(-14px) rotate(var(--r, 0deg)); }
+  }
+  @keyframes bobSlow {
+    0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+    50% { transform: translateY(-9px) rotate(calc(var(--r, 0deg) + 2deg)); }
+  }
+  @keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .sticker { position: absolute; pointer-events: none; }
+  .card {
+    background: #FFFFFF;
+    border: 1.5px solid rgba(28,27,24,0.14);
+    box-shadow: 0 1px 0 rgba(28,27,24,0.04);
+  }
+  .torn {
+    border-radius: 6px 14px 8px 16px / 14px 6px 18px 8px;
+  }
+  .feature-card {
+    transition: transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s ease;
+  }
+  .feature-card:hover {
+    transform: rotate(0deg) translateY(-6px) !important;
+    box-shadow: 0 16px 30px rgba(28,27,24,0.12);
+  }
+  .pin {
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+  .btn-primary {
+    background: #17160F;
+    color: #FAF5EA;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(23,22,15,0.22); }
+  .btn-outline {
+    background: transparent;
+    color: #1C1B18;
+    border: 1.5px solid rgba(28,27,24,0.25);
+  }
+  .btn-outline:hover { border-color: #1C1B18; transform: translateY(-2px); }
+
+  @media (max-width: 720px) {
+    h1 { font-size: 40px !important; }
+    .feature-grid { grid-template-columns: 1fr !important; }
+    .hero-sticker-outer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div style="width: 100%; min-height: 100vh; overflow-x: hidden;">
+
+  <!-- Header -->
+  <header style="max-width: 1120px; margin: 0 auto; padding: 28px 40px 0 40px; display: flex; align-items: center; justify-content: space-between;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <img src="assets/img/logo_riset.png" alt="" style="width: 16px; height: auto;">
+      <span style="font-weight: 800; font-size: 20px; letter-spacing: 0.01em;">RISET</span>
+    </div>
+    <nav style="display: flex; gap: 28px; font-size: 15px; font-weight: 500;">
+      <a class="navlink" href="https://www.instagram.com/risetstudio/" target="_blank" rel="noopener">Instagram</a>
+      <a class="navlink" href="soporte.html">Soporte</a>
+      <a class="navlink" href="privacidad.html">Privacidad</a>
+    </nav>
+  </header>
+
+  <!-- Hero with sticker collage -->
+  <section style="padding: 64px 40px 24px 40px; position: relative; min-height: 480px;">
+
+    <img class="sticker hero-sticker-outer" src="assets/img/ilust_ciclo1.png" alt="" style="--r: -8deg; width: 44px; left: 1%; top: 16px; animation: bob 6.2s ease-in-out infinite;">
+    <img class="sticker hero-sticker-outer" src="assets/img/ilust_ciclo2.png" alt="" style="--r: 9deg; width: 40px; right: 1%; top: 86px; animation: bobSlow 7.4s ease-in-out infinite;">
+    <img class="sticker hero-sticker-outer" src="assets/img/ilust_ciclo3.png" alt="" style="--r: -5deg; width: 50px; left: 2%; bottom: 110px; animation: bob 6.8s ease-in-out infinite;">
+    <img class="sticker hero-sticker-outer" src="assets/img/ilust_ciclo4.png" alt="" style="--r: 6deg; width: 38px; right: 2%; bottom: 170px; animation: bobSlow 5.8s ease-in-out infinite;">
+    <img class="sticker hero-sticker-outer" src="assets/img/ilust_ciclo5.png" alt="" style="--r: -4deg; width: 40px; left: 6%; top: 250px; animation: bob 7.6s ease-in-out infinite;">
+    <img class="sticker hero-sticker-outer" src="assets/img/ilust_ciclo6.png" alt="" style="--r: 5deg; width: 36px; right: 6%; top: 290px; animation: bobSlow 6.9s ease-in-out infinite;">
+
+    <div style="max-width: 1120px; margin: 0 auto; position: relative;">
+      <div style="position: relative; min-height: 360px;">
+
+        <img class="sticker" src="assets/img/preguntas.png" alt="" style="--r: -11deg; width: 58px; left: 4%; top: 6px; animation: bob 5.5s ease-in-out infinite;">
+        <img class="sticker" src="assets/img/pulsos.png" alt="" style="--r: 9deg; width: 64px; right: 2%; top: 0px; animation: bobSlow 6.5s ease-in-out infinite;">
+        <img class="sticker" src="assets/img/ciclos.png" alt="" style="--r: -14deg; width: 46px; left: 12%; bottom: 8px; animation: bob 7s ease-in-out infinite;">
+        <img class="sticker" src="assets/img/comodin.png" alt="" style="width: 40px; right: 14%; bottom: 26px; animation: spinSlow 18s linear infinite;">
+
+        <div style="text-align: center; padding-top: 40px;">
+          <div style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border: 1.5px dashed rgba(28,27,24,0.3); border-radius: 999px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6a64; margin-bottom: 28px;">
+            Ya disponible en iOS
+          </div>
+          <h1 style="margin: 0; font-size: 64px; line-height: 1.05; font-weight: 800; letter-spacing: -0.01em; max-width: 760px; margin-left: auto; margin-right: auto;">
+            Una pregunta al día para no vivir en piloto automático.
+          </h1>
+          <p style="margin: 24px auto 0 auto; max-width: 520px; font-size: 18px; line-height: 1.55; color: #4c4b46;">
+            No es terapia. No es productividad. Es un momento de pausa, cada día, para pensar con intención.
+          </p>
+          <div style="display: flex; gap: 14px; justify-content: center; margin-top: 32px; flex-wrap: wrap;">
+            <a class="btn btn-primary" href="https://apps.apple.com/us/app/riset-una-pregunta-al-d%C3%ADa/id6797267229" target="_blank" rel="noopener">Descárgala en el App Store</a>
+            <a class="btn btn-outline" href="https://www.instagram.com/risetstudio/" target="_blank" rel="noopener">@risetstudio en Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Duality strip -->
+  <section style="max-width: 1120px; margin: 56px auto 0 auto; padding: 0 40px;">
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+      <div class="card torn" style="display: flex; align-items: center; gap: 14px; padding: 18px 26px; transform: rotate(-1.5deg);">
+        <img src="assets/img/preguntas.png" alt="" style="width: 26px;">
+        <div>
+          <div style="font-weight: 700; font-size: 15px;">Reflexión</div>
+          <div style="font-size: 13px; color: #6b6a64;">Tu espacio privado</div>
+        </div>
+      </div>
+      <div style="align-self: center; font-size: 20px; color: #b8b6ab; font-weight: 600;">+</div>
+      <div class="card torn" style="display: flex; align-items: center; gap: 14px; padding: 18px 26px; transform: rotate(1.5deg);">
+        <img src="assets/img/pulsos.png" alt="" style="width: 15px;">
+        <div>
+          <div style="font-weight: 700; font-size: 15px;">Acción</div>
+          <div style="font-size: 13px; color: #6b6a64;">Pulsos, fuera de la app</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature cards, corkboard-pinned -->
+  <section style="max-width: 1120px; margin: 76px auto 0 auto; padding: 0 40px;">
+    <div class="feature-grid" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: start;">
+
+      <div class="card feature-card torn" style="position: relative; padding: 34px 26px 30px 26px; transform: rotate(-2deg);">
+        <div class="pin" style="background: #1D4E89;"></div>
+        <img src="assets/img/preguntas.png" alt="" style="width: 34px; margin-bottom: 18px;">
+        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700;">Una pregunta al día</h3>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #5c5b55;">La misma para todos, para pensar juntos aunque cada uno responda por su cuenta. Solo disponible 24 horas.</p>
+      </div>
+
+      <div class="card feature-card torn" style="position: relative; padding: 34px 26px 30px 26px; transform: rotate(1.5deg);">
+        <div class="pin" style="background: #1F5C4D;"></div>
+        <img src="assets/img/ciclos.png" alt="" style="width: 34px; margin-bottom: 18px;">
+        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700;">Ciclos temáticos</h3>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #5c5b55;">Las preguntas se organizan en ciclos de unas semanas, cada uno con su propio tema y su propio ritmo.</p>
+      </div>
+
+      <div class="card feature-card torn" style="position: relative; padding: 34px 26px 30px 26px; transform: rotate(-1deg);">
+        <div class="pin" style="background: #F2650F;"></div>
+        <img src="assets/img/pulsos.png" alt="" style="width: 34px; margin-bottom: 18px;">
+        <h3 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700;">Pulsos opcionales</h3>
+        <p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #5c5b55;">Pequeñas acciones para salir de la inercia, si te apetece llevar la reflexión un paso más allá.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="max-width: 1120px; margin: 80px auto 0 auto; padding: 32px 40px 56px 40px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(28,27,24,0.1); font-size: 14px; color: #6b6a64; flex-wrap: wrap; gap: 12px;">
+    <span>RISET</span>
+    <div style="display: flex; gap: 24px;">
+      <a class="navlink" href="https://www.instagram.com/risetstudio/" target="_blank" rel="noopener">Instagram</a>
+      <a class="navlink" href="mailto:info.risetstudio@gmail.com">info.risetstudio@gmail.com</a>
+      <a class="navlink" href="privacidad.html">Política de Privacidad</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
