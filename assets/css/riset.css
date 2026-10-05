@@ -33,7 +33,7 @@ a{color:inherit}
 /* ---------- Barra superior ---------- */
 .nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent}
 .nav.scrolled{border-bottom-color:var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:100px}.nav-logo{display:block}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}.nav-logo{display:block}
 .nav-logo img{height:34px;width:auto;max-width:150px;object-fit:contain;object-position:left center}
 .nav-links{display:flex;gap:28px;align-items:center;font-size:15px}
 .nav-links a{text-decoration:none;color:var(--ink-soft)}
