@@ -1,1 +1,147 @@
+/* RISET · estilos compartidos (index, soporte, privacidad) */
+:root{
+  --ink:#141414;
+  --ink-soft:#5f5f5f;
+  --paper:#ffffff;
+  --mist:#f5f5f3;
+  --line:#e6e6e2;
+  --azul:#1665d8;   /* preguntas */
+  --azul-bg:#eef3fc;
+  --naranja:#ff5b14;/* pulsos */
+  --naranja-bg:#fff2ea;
+  --verde:#1f9d3a;  /* ciclos */
+  --verde-bg:#eef8ef;
+  --oro:#f2b705;    /* legendaria */
+  --oro-bg:#fff8e1;
+  --radius-lg:28px;
+  --radius-md:18px;
+  --maxw:1120px;
+  --display:"Bricolage Grotesque", "Figtree", system-ui, sans-serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--azul);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+/* Los PNG de iconos tienen fondo blanco: multiply los funde con fondos tintados */
+.ink-img{mix-blend-mode:multiply}
 
+/* ---------- Barra superior ---------- */
+.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{display:block}
+.nav-logo img{height:26px;width:auto}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--ink-soft)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links .nav-cta{color:var(--paper);background:var(--ink);padding:9px 18px;border-radius:999px}
+.nav-links .nav-cta:hover{color:var(--paper);opacity:.85}
+@media (max-width:640px){.nav-links .hide-sm{display:none}}
+
+/* ---------- Botones ---------- */
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-store{display:inline-flex;align-items:center;gap:10px;background:#000;color:#fff;text-decoration:none;padding:10px 22px 10px 18px;border-radius:14px;line-height:1.1}
+.btn-store svg{width:24px;height:24px;fill:#fff}
+.btn-store small{display:block;font-size:11px;opacity:.85}
+.btn-store strong{display:block;font-size:18px;font-weight:600;letter-spacing:-.01em}
+.btn-store:hover{opacity:.85}
+.btn-ghost{display:inline-flex;align-items:center;padding:0 24px;min-height:56px;border-radius:14px;border:1.5px solid var(--ink);text-decoration:none;font-weight:600}
+.btn-ghost:hover{background:var(--mist)}
+.free-note{margin:14px 0 0;font-size:14px;color:var(--ink-soft)}
+
+/* ---------- Hero ---------- */
+.hero{text-align:center;padding:72px 0 0;overflow-x:clip}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(40px,6.4vw,76px);line-height:1.02;letter-spacing:-.035em;margin:0 auto;max-width:13ch}
+.hero .lead{font-size:clamp(17px,2vw,20px);color:var(--ink-soft);max-width:34em;margin:22px auto 32px}
+.hero-shot{position:relative;margin:56px auto 0;max-width:620px}
+.hero-shot::before{content:"";position:absolute;inset:18% -12% 0;background:radial-gradient(closest-side,var(--mist),transparent);z-index:-1}
+.hero-shot img{width:100%;height:auto}
+
+/* ---------- Cómo funciona ---------- */
+.how{padding:120px 0 40px;scroll-margin-top:68px}
+.sec-title{font-family:var(--display);font-weight:700;font-size:clamp(32px,4.4vw,52px);letter-spacing:-.03em;line-height:1.05;text-align:center;margin:0}
+.sec-lead{text-align:center;color:var(--ink-soft);max-width:30em;margin:16px auto 0}
+
+.schema{margin:64px auto 0;max-width:900px}
+.node{border-radius:var(--radius-lg);padding:32px}
+
+.node h3{font-family:var(--display);font-size:28px;letter-spacing:-.02em;margin:12px 0 8px;line-height:1.1}
+.node p{margin:0;color:#333}
+.node-ciclo{background:var(--verde-bg);max-width:520px;margin:0 auto;text-align:center}
+.node-ciclo .ico{margin:0 auto}
+.node-ciclo h3{color:var(--verde)}
+.node-pregunta{background:var(--azul-bg)}
+.node-pregunta h3{color:var(--azul)}
+.node-pulsos{background:var(--naranja-bg)}
+.node-pulsos h3{color:var(--naranja)}
+.node .when{display:inline-block;margin-top:16px;font-size:14px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.75)}
+.branches{display:block;width:100%;height:110px;color:var(--ink)}
+.branches path{fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.branch-down{display:none}
+.kids{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:760px){
+  .branches{display:none}
+  .branch-down{display:block;width:40px;height:56px;margin:8px auto}
+  .branch-down path{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linecap:round}
+  .kids{grid-template-columns:1fr;gap:16px}
+}
+
+.extras{margin:96px auto 0;max-width:900px;display:grid;grid-template-columns:1.25fr 1fr;gap:24px}
+.legend{background:var(--oro-bg);border-radius:var(--radius-lg);padding:32px;display:flex;gap:24px;align-items:center}
+.legend img{width:110px;flex-shrink:0;transform:rotate(-6deg)}
+.legend h3,.note h3{font-family:var(--display);font-size:24px;letter-spacing:-.02em;margin:0 0 8px;line-height:1.15}
+.legend p,.note p{margin:0;color:#333}
+.notes{display:grid;gap:24px}
+.note{border:1.5px solid var(--line);border-radius:var(--radius-md);padding:24px;display:flex;gap:16px;align-items:flex-start}
+.note .ico{width:56px;height:56px}
+.note h3{font-size:20px}
+@media (max-width:760px){.extras{grid-template-columns:1fr;margin-top:64px}.legend{flex-direction:column;text-align:center}}
+
+/* ---------- Cierre ---------- */
+.closing{text-align:center;padding:120px 0}
+.closing h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4vw,46px);letter-spacing:-.03em;line-height:1.08;margin:0 auto 32px;max-width:16ch}
+
+/* ---------- Footer ---------- */
+.footer{border-top:1px solid var(--line);padding:32px 0 48px;font-size:15px;color:var(--ink-soft)}
+.footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer nav{display:flex;gap:24px;flex-wrap:wrap}
+.footer a{text-decoration:none}
+.footer a:hover{color:var(--ink);text-decoration:underline}
+.ig{display:inline-flex;align-items:center;gap:8px}
+.ig svg{width:18px;height:18px}
+
+/* ---------- Páginas de texto (soporte / privacidad) ---------- */
+.doc{max-width:720px;margin:0 auto;padding:64px 24px 96px}
+.doc h1{font-family:var(--display);font-size:clamp(36px,5vw,52px);letter-spacing:-.03em;line-height:1.05;margin:0 0 12px}
+.doc .meta{color:var(--ink-soft);font-size:15px;margin:0 0 28px}
+.doc h2{font-family:var(--display);font-size:26px;letter-spacing:-.02em;line-height:1.2;margin:56px 0 12px;scroll-margin-top:88px}
+.doc h3{font-size:18px;margin:28px 0 8px}
+.doc p,.doc li{color:#2b2b2b}
+.doc ul{padding-left:1.2em}
+.doc li{margin:6px 0}
+.doc a{color:var(--azul)}
+.toc{background:var(--mist);border-radius:var(--radius-md);padding:24px 28px;margin:32px 0}
+.toc strong{display:block;margin-bottom:8px}
+.toc ol{margin:0;padding-left:1.3em}
+.toc a{text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.contact-card{background:var(--azul-bg);border-radius:var(--radius-lg);padding:32px;margin:32px 0 16px}
+.contact-card h2{margin-top:0}
+.contact-card .mail{display:inline-block;font-family:var(--display);font-size:clamp(20px,3vw,26px);font-weight:600;color:var(--azul);text-decoration:none;word-break:break-all;margin:4px 0 12px}
+.contact-card p{margin:0}
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{cursor:pointer;list-style:none;font-weight:600;font-size:18px;padding:16px 32px 16px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:24px;font-weight:400;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 18px}
+
+/* Recorte de iconos: los PNG tienen mucho margen blanco alrededor */
+.ico{position:relative;width:104px;height:104px;overflow:hidden;flex-shrink:0}
+.ico img{position:absolute;left:50%;top:50%;width:160%;max-width:none;height:auto;transform:translate(-50%,-50%)}
+@media (max-width:640px){.hero-shot{margin-left:-12px;margin-right:-12px}}
