@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://riset-landing.onrender.com/</loc><lastmod>2026-10-07</lastmod><priority>1.0</priority></url>
-  <url><loc>https://riset-landing.onrender.com/soporte.html</loc><lastmod>2026-10-07</lastmod><priority>0.5</priority></url>
-  <url><loc>https://riset-landing.onrender.com/privacidad.html</loc><lastmod>2026-10-07</lastmod><priority>0.3</priority></url>
+  <url><loc>https://riset-landing.onrender.com/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://riset-landing.onrender.com/blog/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://riset-landing.onrender.com/blog/reflexion-diaria/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://riset-landing.onrender.com/blog/pequenas-acciones-diarias/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://riset-landing.onrender.com/blog/mejores-apps-journaling-espanol/</loc><lastmod>2026-10-12</lastmod></url>
+  <url><loc>https://riset-landing.onrender.com/soporte.html</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://riset-landing.onrender.com/privacidad.html</loc><lastmod>2026-10-07</lastmod></url>
 </urlset>
