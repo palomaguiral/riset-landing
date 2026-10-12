@@ -50,7 +50,7 @@
     banner.setAttribute('aria-label', 'Preferencias de cookies');
     banner.innerHTML =
       '<p>Usamos cookies de analítica (Google Analytics) para saber cuánta gente visita la web y mejorarla. ' +
-      'Solo las activamos si aceptas. <a href="privacidad.html#cookies">Más información</a></p>' +
+      'Solo las activamos si aceptas. <a href="/privacidad.html#cookies">Más información</a></p>' +
       '<div class="cookie-btns">' +
       '<button type="button" data-c="rejected">Rechazar</button>' +
       '<button type="button" data-c="accepted">Aceptar</button>' +
