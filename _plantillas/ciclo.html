@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<!--
+==========================================================================
+ PLANTILLA · PÁGINA PÚBLICA DE CICLO  (NO PUBLICAR TODAVÍA)
+==========================================================================
+ Estado: oculta. Lleva <meta name="robots" content="noindex, nofollow">,
+ no está enlazada desde ninguna página y NO está en sitemap.xml.
+
+ Cuando arranque un ciclo oficial:
+   1. Copia este archivo a /ciclos/<slug-del-tema>/index.html
+      (slug en minúsculas, sin tildes, con guiones: /ciclos/gratitud/).
+   2. Sustituye todo lo que está en MAYÚSCULAS y los SLUG-DEL-CICLO.
+   3. QUITA la etiqueta meta robots noindex.
+   4. Añade la URL a sitemap.xml y enlázala desde /blog/ (o crea /ciclos/
+      como índice cuando haya 2 o más) y desde el footer.
+   5. Publícala el día que empieza el ciclo; actualiza dateModified cuando
+      añadas preguntas o recursos.
+
+ Keyword objetivo: "preguntas sobre <tema>" / "preguntas para reflexionar
+ sobre <tema>" / "<tema> en el día a día". Título SEO 50-60 caracteres.
+
+ Estructura (≈ 600-1.000 palabras):
+   H1  Ciclo <Tema>: preguntas y pequeñas acciones para <beneficio>
+   ·   Intro: qué explora el ciclo y por qué ahora (2-3 frases)
+   H2  Por qué <tema>             → 150-300 palabras + 1-2 fuentes
+   H2  Algunas preguntas del ciclo → 3 de muestra mientras dura el ciclo
+                                     (no todas, para no destripar la app);
+                                     al terminar, se pueden publicar todas
+   H2  Pulsos del ciclo           → 2-3 pulsos con su porqué
+   H2  Recursos del ciclo         → libros, artículos, podcasts (enlaces)
+   ·   CTA App Store
+   H2  Preguntas frecuentes (opcional, 2-3, con schema FAQPage)
+   ·   Sigue leyendo: otros ciclos + artículos del blog
+
+ Ritmo: una página por ciclo, publicada al empezar. Entre ciclos, un
+ artículo cada 2 semanas en /blog/.
+==========================================================================
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TEMA: preguntas para reflexionar sobre TEMA · RISET</title>
+<meta name="description" content="DESCRIPCIÓN DE 140-160 CARACTERES CON LA KEYWORD «PREGUNTAS SOBRE TEMA» Y UNA LLAMADA A LA ACCIÓN.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://riset-landing.onrender.com/ciclos/SLUG-DEL-CICLO/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RISET">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://riset-landing.onrender.com/ciclos/SLUG-DEL-CICLO/">
+<meta property="og:title" content="TEMA: preguntas para reflexionar sobre TEMA · RISET">
+<meta property="og:description" content="DESCRIPCIÓN DE 140-160 CARACTERES CON LA KEYWORD «PREGUNTAS SOBRE TEMA» Y UNA LLAMADA A LA ACCIÓN.">
+<meta property="og:image" content="https://riset-landing.onrender.com/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TEMA: preguntas para reflexionar sobre TEMA · RISET">
+<meta name="twitter:description" content="DESCRIPCIÓN DE 140-160 CARACTERES CON LA KEYWORD «PREGUNTAS SOBRE TEMA» Y UNA LLAMADA A LA ACCIÓN.">
+<meta name="twitter:image" content="https://riset-landing.onrender.com/assets/img/og-image.png">
+<meta name="apple-itunes-app" content="app-id=6797267229">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/riset.css">
+<link rel="stylesheet" href="/assets/css/beta.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Ciclo TEMA: preguntas y pequeñas acciones para BENEFICIO",
+      "description": "DESCRIPCIÓN",
+      "inLanguage": "es",
+      "datePublished": "AAAA-MM-DD",
+      "dateModified": "AAAA-MM-DD",
+      "image": "https://riset-landing.onrender.com/assets/img/og-image.png",
+      "mainEntityOfPage": "https://riset-landing.onrender.com/ciclos/SLUG-DEL-CICLO/",
+      "author": {
+        "@id": "https://riset-landing.onrender.com/#org"
+      },
+      "publisher": {
+        "@id": "https://riset-landing.onrender.com/#org"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://riset-landing.onrender.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "TEMA",
+          "item": "https://riset-landing.onrender.com/ciclos/SLUG-DEL-CICLO/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="nav scrolled">
+  <div class="wrap">
+    <a class="nav-logo" href="/" aria-label="RISET, inicio"><img src="/assets/img/logo-riset.webp" width="165" height="180" alt="RISET"></a>
+    <nav class="nav-links">
+      <a class="hide-sm" href="/#como-funciona">Cómo funciona</a>
+      <a class="hide-sm" href="/blog/">Blog</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/riset-una-pregunta-al-d%C3%ADa/id6797267229">Descargar</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc article">
+  <p class="crumbs"><a href="/">Inicio</a> › Ciclos › TEMA</p>
+  <h1>Ciclo TEMA: preguntas y pequeñas acciones para BENEFICIO</h1>
+  <p class="meta">Del <time datetime="AAAA-MM-DD">FECHA INICIO</time> al <time datetime="AAAA-MM-DD">FECHA FIN</time></p>
+  <p class="lead">INTRO: QUÉ EXPLORA ESTE CICLO EN 2-3 FRASES Y POR QUÉ LO HEMOS ELEGIDO AHORA.</p>
+
+  <h2 id="por-que">Por qué TEMA</h2>
+  <p>CONTEXTO DEL TEMA (150-300 PALABRAS). QUÉ PROBLEMA COTIDIANO TOCA Y QUÉ DICE ALGÚN ESTUDIO O AUTOR DE REFERENCIA, CITADO ABAJO EN FUENTES.</p>
+
+  <h2 id="preguntas">Algunas preguntas del ciclo</h2>
+  <p>Estas son algunas de las preguntas que te encontrarás en la app durante el ciclo:</p>
+  <ul>
+    <li>PREGUNTA DE MUESTRA 1</li>
+    <li>PREGUNTA DE MUESTRA 2</li>
+    <li>PREGUNTA DE MUESTRA 3</li>
+  </ul>
+
+  <h2 id="pulsos">Pulsos del ciclo</h2>
+  <ul class="pulse-list">
+    <li><strong>PULSO 1.</strong> SU PORQUÉ EN UNA FRASE.</li>
+    <li><strong>PULSO 2.</strong> SU PORQUÉ EN UNA FRASE.</li>
+    <li><strong>PULSO 3.</strong> SU PORQUÉ EN UNA FRASE.</li>
+  </ul>
+
+  <h2 id="recursos">Recursos del ciclo</h2>
+  <ul>
+    <li><a href="URL">RECURSO 1</a>: POR QUÉ LO RECOMENDAMOS.</li>
+    <li><a href="URL">RECURSO 2</a>: POR QUÉ LO RECOMENDAMOS.</li>
+  </ul>
+
+  <div class="cta-box">
+    <h2>Responde la pregunta de hoy</h2>
+    <p>Las preguntas de este ciclo se desbloquean una cada día en RISET. Gratis y sin anuncios.</p>
+    <a class="btn-store" href="https://apps.apple.com/app/riset-una-pregunta-al-d%C3%ADa/id6797267229" aria-label="Descargar RISET en el App Store"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg><span><small>Descárgala en el</small><strong>App Store</strong></span></a>
+  </div>
+
+  <h2 id="fuentes">Fuentes</h2>
+  <ul class="sources">
+    <li>AUTOR (AÑO). TÍTULO. <em>REVISTA</em>.</li>
+  </ul>
+
+  <aside class="related">
+    <h2>Sigue leyendo</h2>
+    <div class="post-grid">
+        <a class="post-card post-azul" href="/blog/reflexion-diaria/">
+          <span class="post-tag">Reflexión</span>
+          <h3>Qué es la reflexión diaria y por qué funciona</h3>
+          <p>El problema del piloto automático y lo que dicen los estudios sobre pararse a pensar unos minutos al día.</p>
+        </a>
+        <a class="post-card post-naranja" href="/blog/pequenas-acciones-diarias/">
+          <span class="post-tag">Pulsos</span>
+          <h3>Pequeñas acciones diarias para notar cambios reales</h3>
+          <p>Por qué lo pequeño funciona y ejemplos concretos para relaciones, atención, cuerpo, trabajo y más.</p>
+        </a>
+    </div>
+  </aside>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© 2026 RISET</span>
+    <nav>
+      <a class="ig" href="https://www.instagram.com/risetstudio/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@risetstudio
+      </a>
+      <a href="/blog/">Blog</a>
+      <a href="/soporte.html">Soporte</a>
+      <a href="/privacidad.html">Política de privacidad</a>
+      <button type="button" class="link-btn" data-cookie-settings>Configurar cookies</button>
+    </nav>
+  </div>
+</footer>
+<script src="/assets/js/consent.js" defer></script>
+</body>
+</html>
