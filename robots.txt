@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://riset-landing.onrender.com/sitemap.xml
+Sitemap: https://risetstudio.app/sitemap.xml
