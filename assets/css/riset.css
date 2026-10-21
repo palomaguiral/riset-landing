@@ -212,10 +212,10 @@ a{color:inherit}
 
 /* ---------- Artículos: ancho y fotos ---------- */
 .doc.article{max-width:880px;padding-left:20px;padding-right:20px}
-.post-img{margin:36px 0}
+.post-img{margin:32px auto;max-width:480px}
 .post-img img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:var(--radius-md);background:var(--mist)}
 .post-img figcaption{margin-top:8px;font-size:13px;color:var(--ink-soft)}
 .post-img figcaption a{color:var(--ink-soft)!important}
-.post-hero{margin:8px 0 36px}
+.post-hero{margin:8px auto 32px;max-width:540px}
 .post-hero img{aspect-ratio:16/9}
-@media (max-width:640px){.doc.article{padding-left:16px;padding-right:16px}.post-img{margin:28px -16px}.post-img img{border-radius:0}.post-img figcaption{padding:0 16px}}
+@media (max-width:640px){.doc.article{padding-left:16px;padding-right:16px}.post-img{margin:24px auto}}
