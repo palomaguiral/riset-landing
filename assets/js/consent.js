@@ -82,4 +82,20 @@
       show();
     }
   });
+
+  // Medición de descargas de PDF (solo se envía si la persona aceptó la analítica)
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || !gaLoaded) return;
+    var url = a.href.split('#')[0].split('?')[0];
+    if (!/\.pdf$/i.test(url)) return;
+    var file = url.substring(url.lastIndexOf('/') + 1);
+    gtag('event', 'descarga_pdf', {
+      file_name: file,
+      link_url: url,
+      link_text: (a.textContent || '').trim().slice(0, 100),
+      boton: a.closest('.res-end') ? 'final' : 'principal',
+      transport_type: 'beacon'
+    });
+  });
 })();
